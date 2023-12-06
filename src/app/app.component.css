@@ -1,0 +1,183 @@
+/* Reset and basic styles */
+* {
+  font-weight: bold;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0;
+  margin: 0;
+ 
+}
+
+/* Navigation styles */
+.nav {
+  padding: 20px 20px 0px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #F7F4E6;
+}
+
+.navleft {
+  justify-content: space-between;
+  display: flex;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15vh;
+  font-size: 40px;
+}
+
+.ic {
+  font-size: 50px;
+  margin: 10px 10px 0 20px;
+}
+.nav a {
+  transition: 0.5s;
+  text-decoration: none;
+}
+.nav a:hover{
+  color: #E5007D;
+  transform: 0.5s;
+}
+
+/* Page layout */
+.outtop {
+  z-index: 0;
+}
+
+.leftm {
+  width: 25%;
+  flex: 1;
+  top: 0;
+  height: 100vh;
+  position: sticky;
+  overflow-y: scroll;
+}
+
+.rightm {
+  width: 75%;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Card styles */
+.card-container{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.card {
+  align-items: center;
+  display: flex;
+  padding: 5px;
+  text-align: center;
+  background-color: #e5007e07;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+.card:hover{
+  background-color: rgba(128, 128, 128, 0.185);
+  transition: 0.5s;
+  color: #E5007D;
+}
+.cardn{
+  width: 20%;
+}
+.cardi{
+  width: 80%;
+}
+
+.date-container{
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.date-number {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 5px;
+}
+
+.card-info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: start;
+}
+.date-number {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px;
+  font-size: 35px;
+}
+
+.day {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+.nam{
+  font-size: 22px;
+  font-weight: bold;
+}
+.aut{
+font-size: 13px;
+color: gray;
+}
+.add{
+font-size: 13px;
+color: gray;
+}
+
+/* Other styles remain unchanged */
+
+.card-bio {
+  margin: 0;
+}
+
+/* Link styles */
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+.active-link {
+  color: #E5007D;
+  font-weight: bold;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .leftm {
+    width: 30%;
+  }
+
+  .rightm {
+    width: 70%;
+  }
+}
+
+@media (max-width: 576px) {
+  .nav ul {
+    font-size: 30px;
+  }
+
+  .ic {
+    font-size: 20px;
+    margin: 10px 5px 0 15px;
+  }
+
+  .leftm,
+  .rightm {
+    width: 100%;
+  }
+}

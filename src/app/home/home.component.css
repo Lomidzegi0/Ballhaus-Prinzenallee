@@ -1,0 +1,16 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.news{
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+}
+.news img{
+    width: 1000px;
+    height: 850px;
+}

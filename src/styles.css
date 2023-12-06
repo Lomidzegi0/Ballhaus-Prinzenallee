@@ -1,0 +1,11 @@
+:root {
+    --main-bg-color: #F7F4E6;
+    --color-red: red ;
+  }
+  
+  body {
+    padding: 0px;
+    margin: 0px;
+    background-color: var(--color-red);
+    background-color: var(--main-bg-color);
+  }

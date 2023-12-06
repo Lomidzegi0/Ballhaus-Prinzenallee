@@ -1,0 +1,25 @@
+<div  class="main">
+  <div *ngFor="let card of cards" class="card-container">
+    
+      <div  class="card">
+        
+        <div class="cardl">
+          <p>{{ card.bio }}</p>
+        </div>
+        <div class="cardn">
+          <div class="date-container">
+            <h2 class="date-number"><h3 class="card-name nam"> {{ card.cardName }}	</h3>
+              <div class="date">
+                <h3 class="prem" *ngIf="card.showSpecialContent">ǝɹǝᴉɯǝɹꓒ</h3>
+              <div class="date2">
+              <h3 class="num">{{ getDayNumberFromDate(card.date) }}.</h3>
+               <h3 class="mon">{{ getMonthFromDate(card.date) }}.</h3>
+              </div>
+              </div>
+               <div class="cir">
+                <img *ngIf="card.picture" [src]="card.picture" alt="Card Image" class="card-image">
+  
+               </div>
+            </h2> 
+        </div>
+      

@@ -1,0 +1,60 @@
+<!-- admin.component.html -->
+<div class="main">
+  <div class="admin-container cont1">
+    <h2>Add a New Play</h2>
+    <div class="form-container">
+      <label for="cardName">Der Name des Stücks:</label>
+      <input type="text" id="cardName" name="cardName" [(ngModel)]="cardName" required>
+      <div class="cont2">
+        <label for="markForSpecialContent">Premiere :
+          <input type="checkbox" id="markForSpecialContent" name="markForSpecialContent" [(ngModel)]="markForSpecialContent">
+        </label>
+      </div>
+      <label for="date">Datum:</label>
+      <input type="date" id="date" name="date" [(ngModel)]="date" required>
+
+      <label for="address">Adresse:</label>
+      <input type="text" id="address" name="address" [(ngModel)]="address" required>
+
+      <label for="uploadPicture">Upload Picture:</label>
+
+      <label for="authorNames">Name des Regisseurs:</label>
+      <input type="text" id="authorNames" name="authorNames" [(ngModel)]="authorNames" required><br><br>
+      <label for="bio">Bio:</label>
+      <textarea id="bio" name="bio" [(ngModel)]="bio" rows="4"></textarea><br><br>
+      <button (click)="addCard()">Add Card</button>
+    </div>
+
+    <hr>
+
+    <h2>Your Cards</h2>
+    <div class="cards-container">
+      <div *ngFor="let card of cards" class="card-item">
+        <p><strong>ID:</strong> {{ card.cardId }}</p>
+        <p><strong>Name:</strong> {{ card.cardName }}</p>
+        <p><strong>Date:</strong> {{ card.date }}</p>
+
+        <button (click)="deleteCard(card.cardId, card.cardName, card.date)">Delete Card</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="newsup">
+    <h2>Upload News</h2>
+    <form (submit)="onSubmit(form)" #form="ngForm">
+      <label for="image">Upload News:</label>
+<input type="file" id="image" name="image" (change)="onNewsFileSelected($event)">
+      <button type="submit" [disabled]="!form.valid">Upload</button>
+    </form>
+    <hr> 
+    <h2>Your News</h2>
+    <div class="cards-container newscard">
+      <div *ngFor="let newsItem of newsList">
+        <div class="cards-container">
+          <img [src]="newsItem.imageUrl" alt="News Image" />
+        </div>
+        <button (click)="onDeleteNews(newsItem.id)">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
